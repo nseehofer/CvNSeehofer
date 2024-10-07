@@ -1,28 +1,73 @@
-/* ESTILOS HEADER*/
-
-* {
-    margin: 0%;
-    padding: 0%;
+:root {
+    --principal: #0f787f;
+    --secundario: #38B6FF;
+    --fondo: #f0f0f0;
+    --texto: #1d1d1d;
+    --grisIntermedio: #b3b3b3;
+    --destacado: #ffcc00;
 }
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--fondo);
+    scroll-behavior: smooth;
+}
+
+/* ESTILO HEADER*/
 
 .header {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 2%;
+    box-shadow: 0 4px 6px -1px rgba(51, 51, 51, 0.5);
+    background-color: rgba(15, 120, 127, 0.5);
     /*gap: 5%; PARA RESPONSIVE*/
 }
 
 .header .figure-imagen-perfil {
-    width: 20vh;
+    width: 8rem;
 
 }
 
-.header div {
+.header .div-info-principal {
+    display: flex;
+    flex-direction: column;
     width: 40%;
+    justify-content: space-around;
+}
+
+.header .div-info-principal p {
+    font-weight: 400;
 }
 
 .header .figure-imagen-perfil img {
     max-width: 100%;
     height: auto;
     border-radius: 2rem;
+}
+
+@media screen and (max-width: 1124px) {
+    .ocultar-ciudad {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .ocultar-nacimiento {
+        display: none;
+    }
 }
