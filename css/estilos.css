@@ -24,11 +24,12 @@ body {
     width: 100%;
     background-color: var(--fondo);
     scroll-behavior: smooth;
+    text-decoration: none;
 }
 
 /* ESTILO HEADER*/
 
-.header {
+.header-cv {
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -38,26 +39,36 @@ body {
     /*gap: 5%; PARA RESPONSIVE*/
 }
 
-.header .figure-imagen-perfil {
+.header-cv .figure-imagen-perfil {
     width: 8rem;
-
 }
 
-.header .div-info-principal {
+.header-cv .div-info-principal {
     display: flex;
     flex-direction: column;
     width: 40%;
     justify-content: space-around;
 }
 
-.header .div-info-principal p {
+.header-cv .div-info-principal p {
     font-weight: 400;
 }
 
-.header .figure-imagen-perfil img {
+.header-cv .figure-imagen-perfil img {
     max-width: 100%;
     height: auto;
     border-radius: 2rem;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 1124px) {
@@ -70,4 +81,27 @@ body {
     .ocultar-nacimiento {
         display: none;
     }
+}
+
+
+.main-cv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.section-cv {
+    width: 100%;
+}
+
+.boton-ir-arriba {
+    color: var(--texto);
+    background-color: var(--secundario);
+    border-radius: 2rem;
+    border: 1px solid var(--destacado);
+    position: absolute;
+    padding: 0.5%;
+    bottom: 1px;
+    right: 20px;
 }
